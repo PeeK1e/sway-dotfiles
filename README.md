@@ -2,10 +2,10 @@
 
 ## Preview
 <p float="left">
-  <img src="assets/desktop.png" width="200" />
-  <img src="assets/rofi.png" width="200" /> 
-  <img src="assets/shell.png" width="200" /> 
-  <img src="assets/vim.png" width="200" /> 
+  <img src="assets/desktop.png" width="400" />
+  <img src="assets/rofi.png" width="400" /> 
+  <img src="assets/shell.png" width="400" /> 
+  <img src="assets/vim.png" width="400" /> 
 </p>
 
 ## Install
