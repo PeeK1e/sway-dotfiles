@@ -1,0 +1,115 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 10,
+    "margin": "0 0 0 0",
+    //"width": 1350, // Waybar width
+    // Choose the order of the modules idle_inhibitor
+    "modules-left": ["sway/workspaces", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "temperature", "cpu" , "memory", "network"],
+
+ // Modules configuration
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        // "format": "< %g >",
+        // "format_focused" : "< %g ● >",
+    },
+/*
+    "mpd": {
+        "tooltip": true,
+        "tooltip-format": "{artist} - {album} - {title} - Total Time : {totalTime:%M:%S}",
+        "format": " {elapsedTime:%M:%S}",
+        "format-disconnected": "⚠  Disconnected",
+        "format-stopped": " Not Playing",
+        "on-click": "mpc toggle",
+        "state-icons": {
+            "playing": "",
+                "paused": ""
+        }
+    },
+*/
+    "tray": {
+        "icon-size": 21,
+        "spacing": 5
+    },
+    "clock": {
+        "tooltip-format": "{:%A %B %d %Y | %H:%M}",
+        //"format": "  {:%a %d %b ~ %I:%M %p}",	//12 hour format
+        "format": " {:%a %d %b ~ %H:%M}",	//24 hour format
+        "format-alt": "  {:%d/%m/%Y ~ %H:%M:%S}",
+        //"timezones": [ "Kolkata" ],
+        //"max-length": 200
+        "interval": 1
+    },
+    "cpu": {
+        "format": "📈{usage: >3}%",
+        "on-click": "foot bashtop"
+    },
+    "memory": {
+        "format": "🐏{: >3}%",
+        "on-click": "alacritty -e htop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp3_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "  {temperatureC}°C",
+        "on-click": "foot watch -n1 sensors"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent: >3}%",
+        "format-icons": ["", ""],
+        // "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-down": "light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob",
+        // "on-scroll-up": "brightnessctl -c backlight set +5%"
+        "on-scroll-up": "light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity: >3}%",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+        //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+    },
+     "network": {
+       // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-ethernet": "  Wired",
+        "format-disconnected": "⚠  Disconnected",
+         // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format": "⚠  Disabled",
+        "format-wifi": "  {essid}",
+        // "on-click": "alacritty -e nmtui"
+        //"on-click": "nm-connection-editor"
+        "on-click": "foot nmtui"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume: >3}%",
+        "format-bluetooth": "{icon} {volume: >3}%",
+        "format-muted":"🔇muted",
+        "format-source": "{volume}% <U+F130>",
+        "format-source-muted": "<U+F131>",
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "📱",
+            "headset": "🎧",
+            "phone": "📱",
+            "portable": "📱",
+            "car": "🚗",
+            "default": ["🎧"]
+        },
+        "on-click": "pavucontrol"
+    },
+}
+
