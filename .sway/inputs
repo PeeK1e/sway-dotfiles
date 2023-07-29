@@ -1,0 +1,36 @@
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+input * {
+    xkb_layout "de(nodeadkeys)"
+    xkb_model "pc86"	    
+    #xkb_variant "pc105"
+    #xkb_options "grp:win_space_toggle"
+}
+
+input 6940:7033:Corsair_CORSAIR_SABRE_RGB_PRO_Gaming_Mouse {
+    accel_profile flat
+    pointer_accel -0.45
+}
+
+input 6940:7078:Corsair_CORSAIR_SLIPSTREAM_WIRELESS_USB_Receiver {
+    accel_profile flat
+    pointer_accel -0.45
+}
+
+input 6940:7064:Corsair_CORSAIR_SABRE_RGB_PRO_WIRELESS_Gaming_Mouse {
+    accel_profile flat
+    pointer_accel -0.45
+}
+

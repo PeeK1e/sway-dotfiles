@@ -1,0 +1,7 @@
+### Output configuration
+
+output * adaptive_sync on
+output * bg $HOME/.sway/bg.png fill
+output DP-2 mode 1920x1080@140.001Hz position 0,0
+output HDMI-A-1 mode 1920x1080@60.000Hz position 1920,0
+
