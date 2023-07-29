@@ -1,13 +1,13 @@
-include $HOME/.sway/outputs
-include $HOME/.sway/inputs
-include $HOME/.sway/hotkeys
-include $HOME/.sway/autostart
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
 set $modalt Mod1
 set $mod Mod4
+
+include $HOME/.sway/outputs
+include $HOME/.sway/inputs
+include $HOME/.sway/hotkeys
+include $HOME/.sway/autostart
 
 #move between workspaces
 bindsym $mod+Control+Left workspace prev
