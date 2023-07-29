@@ -43,13 +43,13 @@ Following Arch / AUR packages were used
 * slurp
 * swappy
 ### Other
-* nvim
+* neovim
 * foot
 ### Fonts
 * ttf-hack-nerd
 
 ```bash
-paru -S mako waybar sway otf-openmoji noto-fonts-emoji catppuccin-gtk-theme-mocha grim slurp swappy nvim foot ttf-hack-nerd
+paru -S mako waybar sway otf-openmoji noto-fonts-emoji catppuccin-gtk-theme-mocha grim slurp swappy neovim foot ttf-hack-nerd
 ```
 
 ## Background

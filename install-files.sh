@@ -10,3 +10,13 @@ for ITEM in "${LOCATIONS[@]}"; do
     mkdir -p "$HOME/$ITEM"
     rsync --recursive "./$ITEM/" "$HOME/$ITEM"
 done
+
+post_copy_script() {
+    _pwd=`pwd`
+    cd .config/rofi/basic
+    bash install.sh
+
+    cd $_pwd
+}
+
+post_copy_script
