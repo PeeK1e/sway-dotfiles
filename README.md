@@ -2,10 +2,10 @@
 
 ## Preview
 <p float="left">
-  <img src="assets/desktop.png" width="500" />
-  <img src="assets/rofi.png" width="500" /> 
-  <img src="assets/shell.png" width="500" /> 
-  <img src="assets/vim.png" width="500" /> 
+  <img src="assets/desktop.png" width="200" />
+  <img src="assets/rofi.png" width="200" /> 
+  <img src="assets/shell.png" width="200" /> 
+  <img src="assets/vim.png" width="200" /> 
 </p>
 
 ## Install
@@ -20,8 +20,8 @@ bash install-files.sh
 
 To override QT settings place something like this into your `.zprofile` (when using ZSH else use the .profile file of your shell)
 ```bash
-	export QT_STYLE_OVERRIDE='gtk2'
-	export QT_QPA_PLATFORMTHEME='wayland'
+export QT_STYLE_OVERRIDE='gtk2'
+export QT_QPA_PLATFORMTHEME='wayland'
 ```
 
 ## Dependencies
