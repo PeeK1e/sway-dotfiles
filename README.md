@@ -52,7 +52,17 @@ Following Arch / AUR packages were used
 * ttf-hack-nerd
 
 ```bash
-paru -S mako waybar sway otf-openmoji noto-fonts-emoji catppuccin-gtk-theme-mocha grim slurp swappy neovim foot ttf-hack-nerd
+paru -S mako \
+          waybar \
+          sway \
+          otf-openmoji \
+          noto-fonts-emoji \
+          catppuccin-gtk-theme-mocha \
+          grim slurp \
+          swappy neovim \
+          foot ttf-hack-nerd\
+          rofi-emoji \
+          rofi-lbonn-wayland
 ```
 
 ## Background
