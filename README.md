@@ -10,7 +10,7 @@
 
 ## Install
 
-Clone the repo an run the install files bash script
+Clone the repo and run the install-files bash script
 
 ```bash
 git clone https://github.com/PeeK1e/sway-dotfiles.git
@@ -20,6 +20,8 @@ bash install-files.sh
 
 To override QT settings place something like this into your `.zprofile` (when using ZSH else use the .profile file of your shell)
 ```bash
+# replace by your favorite color scheme
+export GTK_THEME='Catppuccin-Mocha-Standard-Mauve-dark'
 export QT_STYLE_OVERRIDE='gtk2'
 export QT_QPA_PLATFORMTHEME='wayland'
 ```
@@ -28,24 +30,25 @@ export QT_QPA_PLATFORMTHEME='wayland'
 
 Following Arch / AUR packages were used
 
-### Colors
+#### Colors
 * catppuccin-gtk-theme-mocha
-### Emojis
+#### Emojis
 * noto-fonts-emoji
 * otf-openmoji
-### Sway Building Blocks
+#### Sway Building Blocks
 * sway (ofc)
 * rofi-lbonn-wayland
+* rofi-emoji
 * waybar
 * mako
-### Screenshots
+#### Screenshots
 * grim
 * slurp
 * swappy
-### Other
+#### Other
 * neovim
 * foot
-### Fonts
+#### Fonts
 * ttf-hack-nerd
 
 ```bash
