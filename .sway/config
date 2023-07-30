@@ -4,10 +4,7 @@
 set $modalt Mod1
 set $mod Mod4
 
-include $HOME/.sway/outputs
-include $HOME/.sway/inputs
-include $HOME/.sway/hotkeys
-include $HOME/.sway/autostart
+include $HOME/.sway/conf.d/*
 
 #move between workspaces
 bindsym $mod+Control+Left workspace prev
