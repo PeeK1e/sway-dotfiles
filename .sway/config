@@ -210,5 +210,4 @@ gaps inner 4
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 1920 0
 for_window [class="Steam"] floating enable
 for_window [app_id="cpupower-gui"] floating enable
-for_window [class="discord"] workspace 2, resize set width 1114 px
 

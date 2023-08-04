@@ -10,6 +10,7 @@ border-color=#b7bdf8
 border-radius=5
 default-timeout=10000
 group-by=summary
+default-timeout=2500
 
 [grouped]
 format=<b>%s</b>\n%b
