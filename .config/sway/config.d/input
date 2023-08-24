@@ -1,16 +1,14 @@
 ### Input configuration
 #
 # Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
 # You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+# Put your touchpad's ID to replace "Touchpad-ID" (keep the quotation marks)
+
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+}
 
 input * {
     xkb_layout "de(nodeadkeys)"
@@ -33,4 +31,10 @@ input 6940:7064:Corsair_CORSAIR_SABRE_RGB_PRO_WIRELESS_Gaming_Mouse {
     accel_profile flat
     pointer_accel -0.45
 }
+
+exec_always {
+    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
+    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+}
+
 

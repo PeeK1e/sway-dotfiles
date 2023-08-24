@@ -1,9 +1,9 @@
-#!bin/bash
+#!/bin/bash
 
 PROJECT_ROOT="$(pwd)"
 
 # LOCATIONS to backup, path must be relative to your $HOME
-declare -a LOCATIONS=(".config/waybar" ".sway" ".config/foot" ".config/rofi" ".config/mako" ".config/nvim")
+declare -a LOCATIONS=(".config/waybar" ".config/sway" ".config/foot" ".config/rofi" ".config/mako" ".config/nvim")
 
 for ITEM in "${LOCATIONS[@]}"; do
     printf "Copying %s\n" "$ITEM"

@@ -1,7 +1,0 @@
-# autostart
-exec swaymsg "exec nextcloud"
-exec swaymsg "exec fcitx5"
-exec swaymsg "exec autotiling"
-exec swaymsg "exec wl-paste -t text --watch clipman store --no-persist"
-exec swaymsg "exec mako"
-
