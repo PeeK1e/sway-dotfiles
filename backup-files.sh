@@ -3,7 +3,7 @@
 PROJECT_ROOT="$(pwd)"
 
 # LOCATIONS to backup, path must be relative to your $HOME
-declare -a LOCATIONS=(".config/waybar" ".config/sway" ".config/foot" ".config/rofi" ".config/mako" ".config/nvim")
+declare -a LOCATIONS=(".config/waybar" ".config/sway" ".config/foot" ".config/rofi" ".config/mako" ".config/nvim" ".config/wofi")
 
 for ITEM in "${LOCATIONS[@]}"; do
     printf "Backing up %s\n" "$ITEM"
