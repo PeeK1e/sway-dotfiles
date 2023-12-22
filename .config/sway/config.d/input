@@ -11,9 +11,8 @@ input type:touchpad {
 }
 
 input * {
-    xkb_layout "de(nodeadkeys)"
-    xkb_model "pc86"	    
-    #xkb_variant "pc105"
+   xkb_layout "us"
+   xkb_variant "intl"
     #xkb_options "grp:win_space_toggle"
 }
 

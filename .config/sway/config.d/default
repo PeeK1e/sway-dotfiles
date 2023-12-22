@@ -191,5 +191,6 @@ bindsym $mod+r mode "resize"
 # Screenshots
 #
     bindsym print exec /usr/share/sway/scripts/grimshot --notify copy area && wl-paste --type image/png | swappy -f - 
+    bindsym shift+ctrl+print exec /usr/share/sway/scripts/grimshot --notify copy output && wl-paste --type image/png | swappy -f - 
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 
