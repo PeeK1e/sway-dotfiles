@@ -10,10 +10,15 @@ input type:touchpad {
     natural_scroll enabled
 }
 
-input * {
-   xkb_layout "us"
-   xkb_variant "intl"
-    #xkb_options "grp:win_space_toggle"
+#input 12951:6505:* {
+#   xkb_layout "us"
+#   xkb_variant "intl"
+#    #xkb_options "grp:win_space_toggle"
+#}
+
+input type:keyboard {
+    xkb_layout us(intl),de(nodeadkeys)
+    xkb_options "grp:win_space_toggle"
 }
 
 input 6940:7033:Corsair_CORSAIR_SABRE_RGB_PRO_Gaming_Mouse {
@@ -31,9 +36,9 @@ input 6940:7064:Corsair_CORSAIR_SABRE_RGB_PRO_WIRELESS_Gaming_Mouse {
     pointer_accel -0.45
 }
 
-exec_always {
-    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
-    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
-}
+#exec_always {
+#    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
+#    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+#}
 
 

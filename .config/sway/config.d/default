@@ -177,20 +177,20 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Resize floating windows with mouse scroll:
-    bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt
-    bindsym --whole-window --border $mod+button5 resize grow height 5 px or 5 ppt
-    bindsym --whole-window --border $mod+Shift+button4 resize shrink width 5 px or 5 ppt
-    bindsym --whole-window --border $mod+Shift+button5 resize grow width 5 px or 5 ppt
+bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt
+bindsym --whole-window --border $mod+button5 resize grow height 5 px or 5 ppt
+bindsym --whole-window --border $mod+Shift+button4 resize shrink width 5 px or 5 ppt
+bindsym --whole-window --border $mod+Shift+button5 resize grow width 5 px or 5 ppt
 
 #
 # App shortcuts
 #
-    bindsym $mod+t exec pcmanfm
-    bindsym $mod1+f exec firefox
+bindsym $mod+t exec pcmanfm
+bindsym $mod1+f exec firefox
 #
 # Screenshots
 #
-    bindsym print exec /usr/share/sway/scripts/grimshot --notify copy area && wl-paste --type image/png | swappy -f - 
-    bindsym shift+ctrl+print exec /usr/share/sway/scripts/grimshot --notify copy output && wl-paste --type image/png | swappy -f - 
-    bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+bindsym print exec /usr/share/sway/scripts/grimshot --notify copy area && wl-paste --type image/png | swappy -f - 
+bindsym shift+ctrl+print exec /usr/share/sway/scripts/grimshot --notify copy output && wl-paste --type image/png | swappy -f - 
+bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 
